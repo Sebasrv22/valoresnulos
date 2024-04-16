@@ -23,3 +23,9 @@ df['otros_medios'].describe()
 
 
 print(df)
+
+df['tarjetas_credito'] = df['tarjetas_credito'].fillna(round(df['tarjetas_credito'].median(),1))
+valores_nulos=df.isnull().sum()
+valores_nulos
+
+# valors nulos
